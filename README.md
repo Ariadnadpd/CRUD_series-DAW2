@@ -1,27 +1,26 @@
-# AngularFormsSeries
+# Angular Forms Series - DAW2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+Aplicación CRUD sobre series de Netflix desarrollado con el framework de [Angular](https://angular.io/), [Angular Material](https://material.angular.io/) y [Bootstrap 5](https://getbootstrap.com/).
 
-## Development server
+La aplicación puede crear nuevos registros de series, ver los registros que ya están creados, editarlos y eliminarlos. También se puede realizar búsquedas de las series disponibles en la tabla de inicio. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Además, en la página principal de la aplicación, se puede obtener un listado o registro del nombre de las series que se han seleccionado en la tabla.
 
-## Code scaffolding
+El formulario que se ha realizado para crear y editar las series contiene diferentes campos, los cuales hay que rellenarlos todos obligatoriamente con texto (para el nombre, los géneros y la descripción), fecha, números (para las temporadas y los episodios) y país.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requerimientos
 
-## Build
+1. Tener instalado [Node.js y npm](https://nodejs.org/es/).
+2. Tener instalada la `versión 13.2.6` del CLI Angular.
+3. Tener instalado un navegador, preferiblemente el de `Google Chroome`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Cómo ejecutar el proyecto
 
-## Running unit tests
+En primer lugar, para ejecutar el proyecto localmente hay que descargar la carpeta del proyecto y descomprimirla. Luego, hay que realizar los siguientes pasos desde la terminal del equipo o desde la terminal de un IDE (Visual Studio Code, por ejemplo):
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Ir a la carpeta del proyecto: cd `FormAngular-DAW2-master`.
+* Ejecutar el siguiente comando para descargar todas las dependencias que encuentre en el fichero **package.json** del proyecto: `npm install`.
+* Por último, ejecutar el comando `ng serve` para arrancar el servidor de desarrollo, es decir, para ejecutar la aplicación. Después, navegar a `http://localhost:4200/`.
+* También, se puede ejecutar `ng -o serve` para que la aplicación se ejecute y se abra automáticamente en el navegador por defecto. La aplicación, en ambos casos, se recargará automáticamente si cambia alguno de los archivos de origen.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Otra manera más sencila de acceder al proyecto realizado es haciendo clic [aquí](https://angular-forms-series.netlify.app/). **Recomendación:** acceder al proyecto desde Google Chrome para una visualización más rápida. 
