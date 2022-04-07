@@ -1,0 +1,38 @@
+footer {
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+     
+}
+
+footer span {
+    color:whitesmoke;
+    text-align: center;
+    font-size: small;
+}
+
+footer span a {
+    color: whitesmoke;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3px;
+    font-size: small;
+}
+
+footer ul li {
+    list-style: none;
+}
+footer ul li a{
+    margin-right: 6px;
+    color: whitesmoke;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
