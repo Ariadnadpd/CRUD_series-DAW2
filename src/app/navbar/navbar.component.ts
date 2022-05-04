@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   userLogged = this.authService.getUserLogged();
 
-  constructor(private authService: AuthService, public intermediary: IntermediaryService, private router: Router) { }
+  constructor(private authService: AuthService, public intermediary: IntermediaryService) { }
 
   ngOnInit(): void {
     this.intermediary.nameLocal();
@@ -30,9 +30,9 @@ export class NavbarComponent implements OnInit {
 
   // Method to logout
   logout(){
-    this.authService.logout()
-    this.intermediary.nameLocalS = null;
+    this.authService.logout();
     localStorage.clear();
+    location.replace("/home");
   }
 
 }

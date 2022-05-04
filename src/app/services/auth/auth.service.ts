@@ -42,7 +42,6 @@ export class AuthService {
 
   // Logout method
   logout() {
-    this.router.navigate(['/home']).then( () => {window.location.reload()});
     this.auth.signOut();
   }
   
