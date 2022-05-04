@@ -1,0 +1,30 @@
+<h2 class="whiteprimary">Formulario para editar los datos de la serie</h2>
+
+<div class="container">  
+    <mat-stepper orientation="horizontal">
+        <mat-step>
+          <ng-template matStepLabel>Selecciona una serie para editar</ng-template>
+          <ng-template matStepContent>
+            <div class="element1">
+                <app-list-select (nameIdEvent)="receiveIdSerie($event)"></app-list-select>
+            </div>
+            <div class="container-button">
+                <button mat-button matStepperNext class="button-stepper">Next</button>
+            </div>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Edita los campos que desees</ng-template>
+          <ng-template matStepContent>
+            <div class="element2">
+              <app-addeditall [idSerieSelected]="nameid"></app-addeditall>
+            </div>
+            <div class="container-button">
+                <button mat-button matStepperPrevious class="button-stepper" style="margin-right: 2%;">Back</button>
+            </div>
+          </ng-template>
+        </mat-step>
+      </mat-stepper>
+</div>
+
+

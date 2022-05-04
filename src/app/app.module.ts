@@ -5,26 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SeriesListComponent } from './series-list/series-list.component';
-import { SeriesAddEditComponent } from './series-add-edit/series-add-edit.component';
-import { MessagesComponent } from './messages/messages.component';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { FormsModule } from '@angular/forms';
-import { RECAPTCHA_SETTINGS,  RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
-import { FooterComponent } from './footer/footer.component' ;
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { SeriesService } from './services/series/series.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SeriesListComponent,
-    SeriesAddEditComponent,
-    MessagesComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,17 +27,10 @@ import { FooterComponent } from './footer/footer.component' ;
     AngularMaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    RecaptchaModule,
-    RecaptchaFormsModule,
-  ],
-  providers: [
-    {
-      provide: RECAPTCHA_SETTINGS,
-      useValue: {
-        siteKey: environment.recaptcha.siteKey,
-      } as RecaptchaSettings,
-    },
-  ],
-  bootstrap: [AppComponent]
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
+  ], 
+  bootstrap: [AppComponent],
+  providers: [SeriesService]
 })
 export class AppModule { }

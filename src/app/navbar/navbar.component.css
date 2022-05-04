@@ -1,9 +1,13 @@
-.spacer {
-  flex: 1 1 auto;
+.nav-tool-item .a-white {
+  color: #fff;
 }
 
-mat-toolbar { 
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,0.9430147058823529) 20%, rgba(255,255,255,0) 32%);
+.nav-tool-item a:hover {
+  color: #b0bec5;
 }
 
+.imghome {
+  width: 8%;
+  height: 8%;
+  margin-right: 2%;
+}

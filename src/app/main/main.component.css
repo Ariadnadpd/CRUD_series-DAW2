@@ -1,0 +1,44 @@
+.container-buttons {
+    display: flex;
+    justify-content: center;
+}
+.container-buttons button{
+    margin-left: 3%;
+    text-transform: uppercase;
+}
+
+
+h1, h3, h4, ul li {
+    color: white;
+    text-align: justify;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+h4, ul li {
+    color: white;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+
+
+h4 a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+a{
+    color: black;
+}
+
+.imghome {
+    width: 6%;
+    height: 6%;
+    margin-right: 2%;
+  }
+

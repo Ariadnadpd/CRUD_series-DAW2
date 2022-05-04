@@ -1,0 +1,24 @@
+<div *ngIf="intermediary.nameLocalS != null">
+    <h1><img src="./assets/images/logo.png" class="imghome">eSeries</h1>
+    <h4>Esta aplicación está desarrollada por <a href="https://github.com/Ariadnadpd" >Ariadna Del Pino Domínguez</a>.
+        Es una aplicación SPA que contiene una base de datos basada en algunas series de Netflix. Para poder ver el 
+        contenido de la base de datos, editarlo, crear un nuevo registro o eliminarlo, accede haciendo clic en
+        el botón que se encuentra a continuación.
+    </h4>
+
+    
+    <br>
+    <h3>Información sobre la base de datos:</h3>
+    <ul>
+        <li>La base de datos de series contiene series de netflix de diferentes géneros: <strong>thriller, ciencia ficción, 
+            acción y aventuras, basadas en cómic, siniestra, emocionante, inquietante, etc.</strong></li>
+        <li>Además, contiene los siguientes campos de información: <strong>año de lanzamiento, país, temporadas, episodios, géneros y una
+            pequeña descripción.</strong></li>
+    </ul>
+
+    <br>
+    <div class="container-buttons">
+        <button mat-raised-button routerLink="/list-series">Ver el listado de series</button>
+    </div>
+ 
+</div>

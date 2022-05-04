@@ -1,0 +1,13 @@
+<mat-card>
+    <form align="center">
+      <mat-form-field >
+          <mat-label>Selecciona un personaje</mat-label>
+          <mat-select matNativeControl (selectionChange)="sendIdSerie($event.value)" >
+            <mat-option *ngFor="let i of seriesName" [value]="i.id">
+              {{i.name}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <p *ngIf="name?.length">Has seleccionado la serie <strong>{{name}}</strong></p>
+    </form>
+  </mat-card>

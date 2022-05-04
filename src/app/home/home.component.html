@@ -1,0 +1,89 @@
+<div class="container" *ngIf="!loading && intermediary.nameLocalS==null">
+    <div class="element1">
+        <mat-card class="cardizq">
+            <mat-card-header>
+              <img src="./assets/images/logo.png" class="imghome">
+                <h1>eSeries, tu banco de series virtual</h1>
+            </mat-card-header>
+            <mat-card-content>
+              <p>eSeries es una aplicación SPA desarrollada con el fin de proporcionar
+                una base de datos basada en las series y películas favoritas de Netflix.</p>
+              <p>Además, con eSeries puedes añadir, editar o eliminar las series 
+                  o películas que desees.</p>
+              <p>Inicia sesión o regístrate para poder ver el listado de series y películas.</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="element2">
+          <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+            <mat-tab-group mat-stretch-tabs dynamicHeight class="example-stretched-tabs mat-elevation-z4">
+                <mat-tab label="Iniciar sesión">
+                  <mat-card class="box">
+                    <mat-card-header>
+                      <img src="./assets/images/programmer.png" class="login">
+                      <mat-card-title>Iniciar sesión</mat-card-title>
+                    </mat-card-header>
+                    <form class="example-form" [formGroup]="form_login">
+                      <mat-card-content>
+                        <mat-form-field class="example-full-width">
+                         
+                          <input type="email" matInput placeholder="Email" formControlName="email" required class="input-lore"> 
+                          <mat-error *ngIf="form_login.controls['email'].hasError('required') && form_login.controls['email'].touched">Este campo es <strong>obligatorio</strong>.</mat-error>
+                          <mat-error *ngIf="form_login.get('email').errors?.['email']">El formato del email es <strong>inválido</strong>.</mat-error>
+                          <mat-hint class="hint">Escribe el email siguiendo este formato: ejemplo@gmail.com</mat-hint>
+                         
+                        </mat-form-field>
+                  
+                        <mat-form-field class="example-full-width">
+                          <input type="password" matInput placeholder="Contraseña" formControlName="password" minlength="6" #password required class="input-lore"> 
+                          <mat-error *ngIf="form_login.controls['password'].hasError('required') && form_login.controls['password'].touched">Este campo es <strong>obligatorio</strong>.</mat-error>
+                          <mat-error *ngIf="password.value?.length<6">La contraseña debe de tener como máximo <strong>6 caracteres</strong>.</mat-error>
+                          <mat-hint class="hint">Introduce tu contraseña</mat-hint>
+                        </mat-form-field>
+                      </mat-card-content>
+                      <button type="submit" mat-stroked-button color="accent" class="btn-block" id="color-pink" (click)="login()">Iniciar sesión</button>
+                    </form>
+                  </mat-card>
+                </mat-tab>
+
+                <mat-tab label="Registrarse"> 
+                  <mat-card class="box">
+                    <mat-card-header>
+                      <mat-card-title>Registrarse</mat-card-title>
+                      <img src="./assets/images/programmer.png" class="register">
+                    </mat-card-header>
+                    <br>
+                    <form class="example-form" [formGroup]="form_register">
+                
+                      <mat-card-content>
+                      
+                        <mat-form-field class="example-full-width">
+                          <input type="email" matInput placeholder="Email" formControlName="email" required class="input-lore" id="email-register">
+                          <mat-error *ngIf="form_register.controls['email'].hasError('required') && form_register.controls['email'].touched">Este campo es <strong>obligatorio</strong>.</mat-error>
+                          <mat-error *ngIf="form_register.get('email').errors?.['email']">El formato del email es <strong>inválido</strong>.</mat-error>
+                          <mat-hint class="hint">Escribe el email siguiendo este formato: ejemplo@gmail.com</mat-hint>
+                        </mat-form-field>
+                
+                        <mat-form-field class="example-full-width">
+                          <input type="password" matInput placeholder="Contraseña" formControlName="password" minlength="6" #password required class="input-lore" id="password-register">
+                         <mat-error *ngIf="form_register.controls['password'].hasError('required') && form_register.controls['password'].touched">Este campo es <strong>obligatorio</strong>.</mat-error>
+                         <mat-error *ngIf="password.value?.length<6">La contraseña debe de tener como máximo <strong>6 caracteres</strong>.</mat-error>
+                         <mat-hint class="hint">Introduce tu contraseña</mat-hint>
+                        </mat-form-field>
+                
+                      </mat-card-content>
+                
+                      <button mat-stroked-button color="accent" class="btn-block" id="color-pinkr" (click)="register()">Registrarse</button>
+                
+                    </form>
+                  </mat-card>
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+    </div>
+</div>
+<div><br></div>
+<div><br><br></div>
+<mat-spinner *ngIf="loading" class="spinner" diameter="60"></mat-spinner>

@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 9000px;
+}
+
+.element1, .element2 {
+    align-self: center;
+    
+}
+
+.element2 {
+    width: 100%;
+}
+
+.element1{
+    flex-wrap: wrap;
+}
+
+.button-stepper {
+    background-color: #424242;
+    margin-top: 2%;
+    color: #fff;
+    
+}
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-stepper {
+    background-color: transparent;
+}
+
+h2{
+    text-align:center;
+}
