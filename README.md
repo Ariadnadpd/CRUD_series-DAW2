@@ -10,6 +10,8 @@ Una vez se haya iniciado sesión, se muestra una introducción de la base de dat
 
 El formulario que se ha realizado para crear y editar las series contiene diferentes campos, los cuales hay que rellenarlos todos obligatoriamente con texto (para el nombre, los géneros y la descripción), fecha, números (para las temporadas y los episodios) y país.
 
+En este proyecto se hace uso de componentes anidados (nested-addedit, list-select y addeditall), servicios (auth, intermediary y series) e interfaces (series), enrutamiento y navegación y carga en diferido (lazy load) de todos los componentes.
+
 ## Requerimientos
 
 1. Tener instalado [Node.js y npm](https://nodejs.org/es/).
