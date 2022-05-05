@@ -48,7 +48,6 @@ export class ListSelectComponent implements OnInit {
   }
 
   receiveName(id: Series){
-   
     this.seriesService.getDBSeriesByID(id.toString()).subscribe( (res) => {
       this.serie = res;
       this.name = this.serie.name;

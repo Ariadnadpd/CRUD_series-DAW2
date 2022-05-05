@@ -23,7 +23,7 @@ export class MessagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onNoClick():void {
+  onNoClick() {
     this.dialogRef.close();
   }
 }

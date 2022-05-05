@@ -15,7 +15,6 @@ import { IntermediaryService } from '../services/intermediary/intermediary.servi
 export class AddeditallComponent implements OnInit {
 
   myform!: FormGroup;
-  idSerie!:number;
   
   token: string | undefined;
   filteredCountries : Observable<string[]> | undefined;

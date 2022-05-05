@@ -9,8 +9,6 @@ import { IntermediaryService } from '../services/intermediary/intermediary.servi
 })
 export class NavbarComponent implements OnInit {
 
-  userLogged = this.authService.getUserLogged();
-
   constructor(private authService: AuthService, public intermediary: IntermediaryService) { }
 
   ngOnInit(): void {

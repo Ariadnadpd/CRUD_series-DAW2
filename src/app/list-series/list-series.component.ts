@@ -49,7 +49,6 @@ export class ListSeriesComponent implements OnInit {
   }
 
   ngAfterViewInit():void{
-   
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
