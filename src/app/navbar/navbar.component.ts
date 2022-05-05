@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../services/auth/auth.service';
 import { IntermediaryService } from '../services/intermediary/intermediary.service';
 
@@ -15,7 +14,9 @@ export class NavbarComponent implements OnInit {
   constructor(private authService: AuthService, public intermediary: IntermediaryService) { }
 
   ngOnInit(): void {
-    this.intermediary.nameLocal();
+    if(this.intermediary.nameLocalS !== undefined){ 
+      this.intermediary.nameLocal();
+    }
   }
 
   // Method to selected tab in nav
@@ -31,8 +32,9 @@ export class NavbarComponent implements OnInit {
   // Method to logout
   logout(){
     this.authService.logout();
-    localStorage.clear();
-    location.replace("/home");
+    this.intermediary.nameLocalS = undefined;
+    localStorage.setItem("name", undefined);
+    window.location.replace(" ");
   }
 
 }

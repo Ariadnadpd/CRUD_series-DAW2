@@ -3,8 +3,8 @@
     <span class="nav-tool-items">
       <a mat-button (click)='moveToSelectedTab("Iniciar sesión")' routerLinkActive="active" class="a-white" *ngIf="intermediary.nameLocalS == null">Iniciar sesión</a>
       <a mat-button mat-raised-button (click)='moveToSelectedTab("Registrarse")' routerLinkActive="active" class="a-white" *ngIf="intermediary.nameLocalS == null">Registrarse</a>
-      <a mat-button routerLink="/main" class="a-white" *ngIf="intermediary.nameLocalS != null">Inicio</a>
-      <a mat-button *ngIf="intermediary.nameLocalS !== null ">Hola, {{intermediary.nameLocalS}}</a>
-      <a mat-button mat-raised-button (click)='logout()' routerLink="/home" *ngIf="intermediary.nameLocalS !== null"> Cerrar sesión</a>
+      <a mat-button routerLink="/main" class="a-white" *ngIf="intermediary.nameLocalS !== undefined ">Inicio</a>
+      <a mat-button *ngIf="intermediary.nameLocalS !== undefined  ">Hola, {{intermediary.nameLocalS}}</a>
+      <a mat-button mat-raised-button (click)='logout()' *ngIf="intermediary.nameLocalS !== undefined "> Cerrar sesión</a>
     </span> 
 </mat-toolbar>

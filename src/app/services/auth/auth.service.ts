@@ -42,7 +42,7 @@ export class AuthService {
 
   // Logout method
   logout() {
-    this.auth.signOut();
+    return this.auth.signOut();
   }
   
 }
