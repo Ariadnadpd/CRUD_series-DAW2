@@ -2,6 +2,11 @@
 
 Aplicación CRUD sobre series de Netflix desarrollada con el framework de [Angular](https://angular.io/), [Angular Material](https://material.angular.io/), [Bootstrap 5](https://getbootstrap.com/) y [firebase](https://firebase.google.com/?hl=es) como base de datos. Para la autenticación de los usuarios se ha usado [Firebase Authentication](https://firebase.google.com/docs/auth) y para la base de datos [Cloud Firestore](https://firebase.google.com/docs/firestore).
 
+En primer lugar, para poder usar la aplicación, hay que registrarse o iniciar sesión. Se puede iniciar sesión con las siguientes credenciales:
+
+* Usuario: prueba@gmail.com
+* Contraseña: pruebadaw2
+
 La aplicación puede crear nuevos registros de series, ver los registros que ya están creados, editarlos y eliminarlos. También se puede realizar búsquedas de las series disponibles en la tabla de inicio. 
 
 Además, en la página principal de la aplicación, se muestra una pequeña introducción de la aplicación y un formulario para iniciar sesión o registrarse (campos a rellenar: email y contraseña). Este paso es primordial para poder acceder al listado de series y poder realizar cualquier tipo de acción.
